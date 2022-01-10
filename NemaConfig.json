@@ -1,0 +1,456 @@
+{
+  "Phases": {
+    "maxPhases": 0,
+    "PhaseTable": [
+      {
+        "Number": 0,
+        "Walk": 0,
+        "PedestrianClear": 0,
+        "MinimumGreen": 0,
+        "Passage": 0,
+        "Maximum1": 0,
+        "Maximum2": 0,
+        "YellowChange": 0,
+        "RedClear": 0,
+        "RedRevert": 0,
+        "AddedInitial": 0,
+        "MaximumInitial": 0,
+        "TimeBeforeReduction": 0,
+        "CarsBeforeReduction": 0,
+        "TimeToReduce": 0,
+        "ReduceBy": 0,
+        "MinimumGap": 0,
+        "DynamicMaxLimit": [
+          0,
+          0
+        ],
+        "DynamicMaxStep": 0,
+        "Startup": 0,
+        "Options": 0,
+        "Ring": 0,
+        "Concurrency": 0,
+        "Maximum3": 0,
+        "YellowandRedChangeTimeBeforeEndPedClear": 0,
+        "PedWalkService": 0,
+        "DontWalkRevert": 0,
+        "PedAlternateClearance": 0,
+        "PedAlternateWalk": 0,
+        "PedAdvanceWalkTime": 0,
+        #
+        行人相位提前的时间
+        "PedDelayTime": 0,
+        #
+        行人相位延后的时间
+        "AdvWarnGrnStartTime": 0,
+        "AdvWarnRedStartTime": 0,
+        "AltMinTimeTransition": 0
+      }
+    ],
+    "maxPhaseGroups": 0,
+    "StatusTable": [
+      {
+        "Number": 0,
+        "Reds": 0,
+        "Yellows": 0,
+        "Greens": 0,
+        "DontWalks": 0,
+        "PedClears": 0,
+        "Walks": 0,
+        "VehCalls": 0,
+        "PedCalls": 0,
+        "PhaseOns": 0,
+        "PhaseNexts": 0
+      }
+    ],
+    "ControlTable": [
+      {
+        "Number": 0,
+        "PhaseOmit": 0,
+        "PedOmit": 0,
+        "Hold": 0,
+        "ForceOff": 0,
+        "VehCall": 0,
+        "PedCall": 0
+      }
+    ]
+  },
+  "Detectors": {
+    "maxVehicleDetectors": 0,
+    "VDetectorTable": [
+      {
+        "Number": 0,
+        "Options": 0,
+        "CallPhase": 0,
+        "SwitchPhase": 0,
+        "Delay": 0,
+        "Extend": 0,
+        "QueueLimit": 0,
+        "NoActivity": 0,
+        "MaxPresence": 0,
+        "ErraticCounts": 0,
+        "FailTime": 0,
+        "Alarms": 0,
+        "ReportedAlarms": 0,
+        "Reset": 0,
+        "Options2": 0,
+        "PairedDetector": 0,
+        "PairedDetectorSpacing": 0,
+        "AvgVehicleLength": 0,
+        "Length": 0,
+        "TravelMode": 0
+      }
+    ],
+    "maxVDStatusGroups": 0,
+    "VStatusTable": [
+      {
+        "Number": 0,
+        "Active": 0,
+        "Alarms": 0
+      }
+    ],
+    "VOSequence": 0,
+    "VOPeriod": 0,
+    "ActiveVODetectors": 0,
+    "VOTable": [
+      {
+        "Volume": 0,
+        "Occupancy": 0,
+        "AvgSpeed": 0
+      }
+    ]
+    "VOPeriodV3": 0,
+    "VOSampleTime": 0,
+    "VOSampleDuration": 0,
+    "maxPDetectors": 0,
+    "PDetectorTable": [
+      {
+        "Number": 0,
+        "CallPhase": 0,
+        "NoActivity": 0,
+        "MaxPresence": 0,
+        "ErraticCounts": 0,
+        "Alarms": 0,
+        "Reset": 0,
+        "PushTime": 0,
+        "Options": 0
+      }
+    ],
+    "maxPDGroups": 0,
+    "PDStatusTable": [
+      {
+        "Number": 0,
+        "Active": 0,
+        "Alarms": 0
+      }
+    ],
+    "PSequence": 0,
+    "PPeriod": 0,
+    "ActivePDetectors": 0,
+    "PSampleTable": [
+      {
+        "Volume": 0,
+        "Actuation": 0,
+        "Service": 0
+      }
+    ],
+    "PVASampleTime": 0,
+    "PVAsampleDuration": 0,
+    "maxVDControlGroups": 0,
+    "VControlTable": [
+      {
+        "Number": 0,
+        "Acturation": 0
+      }
+    ],
+    "PControlTable": [
+      {
+        "Number": 0,
+        "Acturation": 0
+      }
+    ]
+  },
+  "Unit": {
+    "StartUpFlash": 0,
+    "AutomaticPedClear": 0,
+    "BackupTime": 0,
+    "RedRevert": 0,
+    "ControlStatus": 0,
+    "FlashStatus": 0,
+    "AlarmStatus2": 0,
+    "AlarmStatus1": 0,
+    "ShortAlarmStatus": 0,
+    "Control": 0,
+    "maxAlarmGroups": 0,
+    "AlarmTable": [
+      {
+        "Number": 0,
+        "State": 0
+      }
+    ],
+    "maxSpecialFunctionOutputs": 0,
+    "specialFunctionOutputTable": [
+      {
+        "Number": 0,
+        "State": 0,
+        "Control": 0,
+        "Status": 0
+      }
+    ],
+    "MCETimeout": 0,
+    "MCEIntAdv": 0,
+    "ElevationOffset": 0,
+    "StartupFlashMode": 0,
+    "UserDefinedBackupTime": 0,
+    "maxUserDefinedBackupTimeContent": 0,
+    "UserDefinedBackupTimeContentTable": [
+      {
+        "Number": 0,
+        "OID": 0,
+        "Description": 0
+      }
+    ],
+    "maxTimeSources": 0,
+    "TimeSourceTable": [
+      {
+        "Index": 0,
+        "SourceAvailable": 0
+      }
+    ],
+    "TimeSourceCommand": 0,
+    "TimeSourceCurrent": 0,
+    "TimeSourceStatus": 0,
+    "TimeNonSequentialSource": 0,
+    "TimeNonSequentialChange": 0,
+    "TimeNonSequentialDelta": 0,
+    "maxCommPorts": 0,
+    "CommPortsTable": [
+      {
+        "Type": 0,
+        "TypeIndex": 0,
+        "Enable": 0,
+        "ProtocolsSupported": 0,
+        "Protocol": 0,
+        "Diagnostics": 0
+      }
+    ],
+    "maxEthernetPorts": 0,
+    "ethernetTable": [
+      {
+        "IpAddr": "",
+        "NetMask": "",
+        "Gateway": "",
+        "DNS": "",
+        "Mode": "",
+        "LogicalName": "",
+        "StaticIpAddr": "",
+        "StaticNetMask": "",
+        "StaticGateway": "",
+        "StaticDNS": ""
+      }
+    ],
+    "AlarmStatus3": 0,
+    "AlarmStatus4": 0
+  },
+  "Coords": {
+    "OperationalMode": 0,
+    "CorrectionMode": 0,
+    "MaximumMode": 0,
+    "ForceMode": 0,
+    "maxPatterns": 0,
+    "PatternTableType": 0,
+    "PatternTable": [
+      {
+        "Number": 0,
+        "CycleTime": 0,
+        "OffsetTime": 0,
+        "SplitNumber": 0,
+        "SequenceNumber": 0,
+        "CoordSyncPoint": 0,
+        "Options": 0,
+        "SpatEnabledLanes": 0
+      }
+    ],
+    "maxSplits": 0,
+    "SplitTable": [
+      [
+        {
+          "Number": 0,
+          "Phase": [
+            {
+              "Number": 0,
+              "Time": 0,
+              "Mode": 0,
+              "CoordPhase": 0,
+              "Options": 0
+            }
+          ]
+        }
+      ]
+    ],
+    "PatternStatus": 0,
+    "localFreeStatus": 0,
+    "CycleStatus": 0,
+    "SyncStatus": 0,
+    "PatternControl": 0,
+    "SyncControl": 0,
+    "SyncPoint": 0
+  },
+  "TimeBase": {
+    "AscPatternSync": 0,
+    "maxTimebaseAscActions": 0,
+    "ActionTable": [
+      {
+        "Number": 0,
+        "Pattern": 0,
+        "AuxFunction": 0,
+        "SpecialFunction": 0
+      }
+    ],
+    "ActionStatus": 0,
+    "PlanControl": 0
+  },
+  "Preempt": {
+    "maxPreempts": 0,
+    "PreemptTable": [
+      {
+        "Number": 0,
+        "Control": 0,
+        "Link": 0,
+        "Delay": 0,
+        "MinimumDuration": 0,
+        "MinimumGreen": 0,
+        "MinimumWalk": 0,
+        "EnterPedClear": 0,
+        "TrackGreen": 0,
+        "DwellGreen": 0,
+        "MaximumPresence": 0,
+        "TrackPhase": 0,
+        "DwellPhase": 0,
+        "DwellPed": 0,
+        "ExitPhase": 0,
+        "State": 0,
+        "TrackOverlap": 0,
+        "DwellOverlap": 0,
+        "CyclingPhase": 0,
+        "CyclingPed": 0,
+        "CyclingOverlap": 0,
+        "EnterYellowChange": 0,
+        "EnterRedClear": 0,
+        "TrackYellowChange": 0,
+        "TrackRedClear": 0,
+        "SequenceNumber": 0,
+        "ExitType": 0
+      }
+    ],
+    "ControlTable": [
+      {
+        "Number": 0,
+        "State": 0
+      }
+    ],
+    "maxPreemptGroups": 0,
+    "StatusTable": [
+      {
+        "Number": 0,
+        "Status": 0
+      }
+    ],
+    "DelayTable": [
+      {
+        "DetectorWeight": 0
+      }
+    ],
+    "maxPreemptGate": 0,
+    "GateTable": [
+      {
+        "Number": 0,
+        "Status": 0,
+        "Description": ""
+      }
+    ]
+  },
+  "Ring": {
+    "maxRings": 0,
+    "maxSequences": 0,
+    "SequenceTable": [
+      {
+        "Number": 0,
+        "Ring": [
+          {
+            "Number": 0,
+            "Data": 0
+          }
+        ]
+      }
+    ],
+    "maxRingControl": 0,
+    "ControTable": [
+      {
+        "Number": 0,
+        "StopTime": 0,
+        "ForceOff": 0,
+        "Max2": 0,
+        "MaxInhibit": 0,
+        "PedRecycle": 0,
+        "RedRest": 0,
+        "OmitRedClear": 0,
+        "Max3": 0
+      }
+    ],
+    "StatusTable": [
+      {
+        "Status": 0
+      }
+    ]
+  },
+  "Channel": {
+    "maxChannels": 0,
+    "ChannelTable": [
+      {
+        "Number": 0,
+        "ControlSource": 0,
+        "ControlType": 0,
+        "Flash": 0,
+        "Dim": 0,
+        "GreenType": 0,
+        "GreenIncluded": 0,
+        "IntersectionId": 0
+      }
+    ],
+    "maxStatus": 0,
+    "StatusTable": [
+      {
+        "Number": 0,
+        "Reds": 0,
+        "Yellows": 0,
+        "Greens": 0
+      }
+    ]
+  },
+  "Overlap": {
+    "maxOverlaps": 0,
+    "OverlapTable": [
+      {
+        "Number": 0,
+        "Type": 0,
+        "IncludedPhases": 0,
+        "ModifierPhases": 0,
+        "TrailGreen": 0,
+        "TrailYellow": 0,
+        "TrailRed": 0,
+        "Walk": 0,
+        "PedClearance": 0,
+        "ConflictingPedPhases": 0
+      }
+    ],
+    "maxStatus": 0,
+    "StatusTable": [
+      {
+        "Number": 0,
+        "Reds": 0,
+        "Yellows": 0,
+        "Greens": 0
+      }
+    ]
+  }
+}
