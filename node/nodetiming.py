@@ -1,6 +1,5 @@
 import copy
 
-
 def timing_plan(configs, plansequence, phasevolume):
     saturation_gap = configs["SaturationGap"]
     phases = configs["phases"]
@@ -197,8 +196,6 @@ def timing_plan(configs, plansequence, phasevolume):
 
 
 
-def ntcip_pattern():
-
 def stage_plan():
     global config
     if config["curplan"] is None:
@@ -213,8 +210,6 @@ def stage_plan():
         if config["step"] == len(config["curplan"]["stages"]):
             config["curplan"] = None
 
-def utc_start():
-    pass
 
 
 
@@ -223,14 +218,14 @@ if __name__ == "__main__":
     config["SaturationGap"] = 2.5
     # phases
     config["phases"] = [
-        {"MinimumGreen": 5, "StartDelay": 3},
-        {"MinimumGreen": 5, "StartDelay": 3},
-        {"MinimumGreen": 5, "StartDelay": 3},
-        {"MinimumGreen": 5, "StartDelay": 3},
-        {"MinimumGreen": 5, "StartDelay": 3},
-        {"MinimumGreen": 5, "StartDelay": 3},
-        {"MinimumGreen": 5, "StartDelay": 3},
-        {"MinimumGreen": 5, "StartDelay": 3}
+        {"MinimumGreen": 5, "StartDelay": 3,"detectors":[],"s_gap":2.5},
+        {"MinimumGreen": 5, "StartDelay": 3,"detectors":[],"s_gap":2.5},
+        {"MinimumGreen": 5, "StartDelay": 3,"detectors":[],"s_gap":2.5},
+        {"MinimumGreen": 5, "StartDelay": 3,"detectors":[],"s_gap":2.5},
+        {"MinimumGreen": 5, "StartDelay": 3,"detectors":[],"s_gap":2.5},
+        {"MinimumGreen": 5, "StartDelay": 3,"detectors":[],"s_gap":2.5},
+        {"MinimumGreen": 5, "StartDelay": 3,"detectors":[],"s_gap":2.5},
+        {"MinimumGreen": 5, "StartDelay": 3,"detectors":[],"s_gap":2.5}
     ]
 
     # Phase Inter_green,from phase #row ,col to Phase #col,0-nor conflict
@@ -271,9 +266,24 @@ if __name__ == "__main__":
         [0, 0, 0, 7, 0, 0, 7, 0]
     ]
 
+    config["detectors"]=[
+        {
+            "presence":0, #实时状态
+            "lastchange":0,#最近一次状态变化时间
+            "datetime":[],#最近一次统计数据时间
+            "volume":[],#流量
+            "occupancy":[],
+            "headway":[],
+            "begintime":0, #实时数据开始时刻
+            "real_occ":0, #实时占有率
+            "real_volume":0, #实时流量
+            "real_headway":0 #实时车头时距
+        }
+    ]
+
+
     # int 表示固定存在，list为可选阶段，tuple为必选其一阶段
     plansequence = [1, [5, 6], 2, 3, [7, 8], 4]
-    # plansequence = [1, [5, 6], 2, 3, 4]
 
     phasevolume = [270, 0, 80, 400,
                    0, 485, 120, 210]
@@ -283,6 +293,5 @@ if __name__ == "__main__":
     config["step"] = 0
     config["curstage"] = 0
 
-    run = stage_plan_running()
-    run.start()
+
     print("starting")

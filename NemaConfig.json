@@ -20,27 +20,20 @@
         "TimeToReduce": 0,
         "ReduceBy": 0,
         "MinimumGap": 0,
-        "DynamicMaxLimit": [
-          0,
-          0
-        ],
+        "DynamicMaxLimit": 0,
         "DynamicMaxStep": 0,
         "Startup": 0,
         "Options": 0,
         "Ring": 0,
         "Concurrency": 0,
         "Maximum3": 0,
-        "YellowandRedChangeTimeBeforeEndPedClear": 0,
+        "ChangeTimeBeforeEndPedClear": 0,
         "PedWalkService": 0,
         "DontWalkRevert": 0,
         "PedAlternateClearance": 0,
         "PedAlternateWalk": 0,
         "PedAdvanceWalkTime": 0,
-        #
-        行人相位提前的时间
         "PedDelayTime": 0,
-        #
-        行人相位延后的时间
         "AdvWarnGrnStartTime": 0,
         "AdvWarnRedStartTime": 0,
         "AltMinTimeTransition": 0
@@ -75,8 +68,8 @@
     ]
   },
   "Detectors": {
-    "maxVehicleDetectors": 0,
-    "VDetectorTable": [
+    "maxVDetectors": 0,
+    "VDTable": [
       {
         "Number": 0,
         "Options": 0,
@@ -100,8 +93,8 @@
         "TravelMode": 0
       }
     ],
-    "maxVDStatusGroups": 0,
-    "VStatusTable": [
+    "maxVDStatus": 0,
+    "VDStatusTable": [
       {
         "Number": 0,
         "Active": 0,
@@ -122,7 +115,7 @@
     "VOSampleTime": 0,
     "VOSampleDuration": 0,
     "maxPDetectors": 0,
-    "PDetectorTable": [
+    "PDTable": [
       {
         "Number": 0,
         "CallPhase": 0,
@@ -143,8 +136,8 @@
         "Alarms": 0
       }
     ],
-    "PSequence": 0,
-    "PPeriod": 0,
+    "PSampleSequence": 0,
+    "PSamplePeriod": 0,
     "ActivePDetectors": 0,
     "PSampleTable": [
       {
@@ -154,18 +147,18 @@
       }
     ],
     "PVASampleTime": 0,
-    "PVAsampleDuration": 0,
+    "PVASampleDuration": 0,
     "maxVDControlGroups": 0,
-    "VControlTable": [
+    "VDControlTable": [
       {
         "Number": 0,
-        "Acturation": 0
+        "Actuation": 0
       }
     ],
     "PControlTable": [
       {
         "Number": 0,
-        "Acturation": 0
+        "Actuation": 0
       }
     ]
   },
@@ -187,8 +180,8 @@
         "State": 0
       }
     ],
-    "maxSpecialFunctionOutputs": 0,
-    "specialFunctionOutputTable": [
+    "maxSFOutputs": 0,
+    "SFOutputTable": [
       {
         "Number": 0,
         "State": 0,
@@ -200,9 +193,9 @@
     "MCEIntAdv": 0,
     "ElevationOffset": 0,
     "StartupFlashMode": 0,
-    "UserDefinedBackupTime": 0,
-    "maxUserDefinedBackupTimeContent": 0,
-    "UserDefinedBackupTimeContentTable": [
+    "BackupTime": 0,
+    "maxBackupTimeContent": 0,
+    "BackupTimeContentTable": [
       {
         "Number": 0,
         "OID": 0,
@@ -251,6 +244,7 @@
     "AlarmStatus3": 0,
     "AlarmStatus4": 0
   },
+
   "Coords": {
     "OperationalMode": 0,
     "CorrectionMode": 0,
@@ -270,6 +264,7 @@
         "SpatEnabledLanes": 0
       }
     ],
+
     "maxSplits": 0,
     "SplitTable": [
       [
@@ -287,6 +282,7 @@
         }
       ]
     ],
+
     "PatternStatus": 0,
     "localFreeStatus": 0,
     "CycleStatus": 0,
@@ -295,6 +291,7 @@
     "SyncControl": 0,
     "SyncPoint": 0
   },
+
   "TimeBase": {
     "AscPatternSync": 0,
     "maxTimebaseAscActions": 0,
@@ -309,6 +306,7 @@
     "ActionStatus": 0,
     "PlanControl": 0
   },
+
   "Preempt": {
     "maxPreempts": 0,
     "PreemptTable": [
@@ -342,6 +340,7 @@
         "ExitType": 0
       }
     ],
+
     "ControlTable": [
       {
         "Number": 0,
@@ -384,7 +383,7 @@
       }
     ],
     "maxRingControl": 0,
-    "ControTable": [
+    "ControlTable": [
       {
         "Number": 0,
         "StopTime": 0,
@@ -452,5 +451,39 @@
         "Greens": 0
       }
     ]
+  },
+  "GlobalTime": {
+    "DaylightSaving": 0,
+    "maxTimeBase": 0,
+    "TimeBaseTable": [
+      {
+        "Number": 0,
+        "Month": 0,
+        "Day": 0,
+        "Date": 0,
+        "DayPlan": 0
+      }
+    ],
+    "maxDayPlans": 0,
+    "maxDayPlanEvents": 0,
+    "DayPlanTable": [
+      {
+        "Number": 0,
+        "Events": [
+          {
+            "Number": 0,
+            "Hour": 0,
+            "Minute": 0,
+            "OID": 0
+          }
+        ]
+      }
+    ],
+    "DayPlanStatus": 0,
+    "ScheduleStatus": 0,
+    "TimeZone": 0,
+    "LocalTime": 0,
+    "DaylightSavingTime": 0,
+    "maxDaylightSaving": 0
   }
 }
