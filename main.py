@@ -1,36 +1,59 @@
+# -*- coding: utf-8 -*-
+import multiprocessing
+import time
+
 from apscheduler.schedulers.blocking import BlockingScheduler
 from sanic import Sanic
 from sanic import response
 
-# 初始化数据结构，读配置文件或数据库，写入model.controller 和 model.node
-# 启动进程：信号机通信进程，代入变量 model.controller 共享变量
-# 启动进程：路口优化，代入变量model.node
-# 启动进程：定时器，代入变量model
-# 启动web进程，开启rest服务
 
-# ：multiprocessing.managers
+def traffic_data_function(cf,stat):
+    while True:
+        stat["volume"] += 1
+        time.sleep(1)
+
+
+def asc_function(cfg, stat):
+    def task1s():
+        stat["time"] = time.time()
+        print(stat["time"])
+
+    def task5s():
+        print("5s")
+
+    sche = BlockingScheduler()
+    sche.add_job(task1s, "interval", seconds=1)
+    sche.add_job(task5s, "interval", seconds=5)
+    sche.start()
+
 
 app = Sanic(__name__)
 
 
+# 对外输出信息
 @app.route("/get", methods=['GET'])
 async def get_handler(request):
-    return response.json({"Hello": "world"})
+    global status
+    return response.json({"Hello": "world", "time": status["time"],"volume":status["volume"]})
 
 
+# 对内控制与提交信息
 @app.route("/command", methods=['POST'])
 async def post_handler(request):
+    b = request.args
+    print(b)
     return response.text("ok")
 
-# 增加一个静态调试页面，采用ajax以滚动条方式输出
-# 增加一个telnet server，提供telnet服务，输出调试状态信息
 
-app.run(host="0.0.0.0", port=80, debug=True)
+if __name__ == "__main__":
+    config = multiprocessing.Manager().dict()
+    config["mk"] = 0
+    status = multiprocessing.Manager().dict()
+    status["time"] = 0
+    status["volume"] = 0
 
-scheduler = BlockingScheduler()
-scheduler.add_job(fnc, 'interval', seconds=1)
-scheduler.start()
-
-if __name__ == '__main__':
-    pass
-    # See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    asc_task = multiprocessing.Process(target=asc_function, args=(config, status))
+    asc_task.start()
+    traffic_data_task= multiprocessing.Process(target=traffic_data_function, args=(config, status))
+    traffic_data_task.start()
+    app.run(host="0.0.0.0", port=80, workers=4, debug=False, access_log=False)
